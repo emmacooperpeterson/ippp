@@ -22,7 +22,9 @@ cat $f | sed 's/\$//' | sed "s/, / /" | grep ',POLICE,' | grep DETECTIVE | wc -l
 echo
 
 **echo** is a print statement
+
 **cat** to view file
+
 **sed** “stream editor” - allows you to filter and transform text
 following SED is a regular expression that removes dollar signs
 
@@ -30,7 +32,7 @@ following SED is a regular expression that removes dollar signs
 * \$ escape character before $ because $ has meaning
 * //
 
-**use single quotes**
+***use single quotes***
 
 **grep** is used to search text for a match, in this case ‘,POLICE,’ and then DETECTIVE *(DETECTIVE doesn't need quotes because it begins and ends with a normal letter)*
 
