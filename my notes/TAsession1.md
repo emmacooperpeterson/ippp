@@ -18,7 +18,9 @@
 #### 3. Homework Q8: How many of them are detectives?
 
 echo "(8) DETECTIVES"
+
 cat $f | sed 's/\$//' | sed "s/, / /" | grep ',POLICE,' | grep DETECTIVE | wc -l
+
 echo
 
 **echo** is a print statement
