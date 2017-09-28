@@ -26,7 +26,8 @@ echo
 **cat** to view file
 
 **sed** “stream editor” - allows you to filter and transform text
-following SED is a regular expression that removes dollar signs
+
+following **sed** is a **regular expression** that removes dollar signs
 
 * s/ —> SEARCH (as opposed to find/replace)
 * \$ escape character before $ because $ has meaning
