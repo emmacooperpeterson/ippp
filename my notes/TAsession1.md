@@ -1,4 +1,4 @@
-## Thursday TA sessions will be 4:30-6:00 from now on
+## Thursday TA sessions will be 4:30-6:00 from now on!
 
 #### 1. Relationship between things
 * Atom <-> Word
