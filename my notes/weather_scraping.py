@@ -8,46 +8,40 @@ req  = requests.get(url)
 html = req.content
 soup = BeautifulSoup(html, 'html.parser')
 
-print(soup.prettify())
+#print(soup.prettify())
 #^ devtools is better
 
 
-
-
-#find info for this afternoon:
-
-period = soup.find(class_="period-name") #find only gets the first instance
+#find info for this afternoon only:
+'''
+period = soup.find(class_="period-name").get_text() #find only gets the first instance
 short_desc = soup.find(class_="short-desc").get_text()
 temp = soup.find(class_="temp").get_text()
 
 print(period)
 print(short_desc)
 print(temp)
-
-
+'''
 
 
 ##################### now we can use lists to get this info for all the time periods
-'''
+
 period_tags = soup.select(".period-name") #select gets all instances and returns a list
 periods = [pt.get_text() for pt in period_tags]
-print(periods)
+#print(periods)
 
 short_descs = [sd.get_text() for sd in soup.select(".short-desc")] #list comp version
-print(short_descs)
+#print(short_descs)
 
 temps = [t.get_text() for t in soup.select(".temp")]
-print(temps)
-'''
-
+#print(temps)
 
 
 #then we could put this in a pandas dataframe, write to csv, etc.
-'''
+
 import pandas as pd
 weather = pd.DataFrame({
         "period": periods,
         "short_desc": short_descs,
         "temp": temps,
     })
-'''
